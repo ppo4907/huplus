@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>(주)휴플러스 - 전기요금 컨설팅</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="로고" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#about">회사소개</a></li>
+          <li><a href="#services">서비스</a></li>
+          <li><a href="#portfolio">포트폴리오</a></li>
+          <li><a href="#contact">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero.jpg" alt="배너 이미지">
+    <div class="hero-text">
+      <h1>에너지 비용, 우리가 줄여드립니다</h1>
+      <p>(주)휴플러스 전기요금 절감 전문 컨설팅</p>
+    </div>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>회사 소개</h2>
+    <p>(주)휴플러스는 기업의 전기요금 절감을 위해 최적 요금제 분석과 정부지원금 연계를 제공하는 에너지 전문 컨설팅 기업입니다.</p>
+  </section>
+
+  <section id="services" class="section gray fade-in">
+    <h2>주요 서비스</h2>
+    <div class="grid">
+      <div class="card">요금제 분석</div>
+      <div class="card">절감 컨설팅</div>
+      <div class="card">정부지원금 매칭</div>
+      <div class="card">진단 리포트 제공</div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section fade-in">
+    <h2>포트폴리오</h2>
+    <div class="gallery">
+      <img src="images/portfolio1.jpg" alt="사례 A">
+      <img src="images/portfolio2.jpg" alt="사례 B">
+      <img src="images/portfolio3.jpg" alt="사례 C">
+    </div>
+  </section>
+
+  <section id="contact" class="section gray fade-in">
+    <h2>문의하기</h2>
+    <form>
+      <input type="text" placeholder="이름" required />
+      <input type="email" placeholder="이메일" required />
+      <textarea placeholder="문의 내용을 입력하세요" required></textarea>
+      <button type="submit">보내기</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HU+ All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.fade-in').forEach(el => {
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) el.classList.add('visible');
+      }).observe(el);
+    });
+  </script>
+</body>
+</html>
